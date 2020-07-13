@@ -1,6 +1,6 @@
 from django.shortcuts import render # renders templates
 from django.http import HttpResponse
-from .models import Tutorial
+from .models import Article
 # Create your views here.
 
 def homepage(request):
@@ -9,4 +9,4 @@ def homepage(request):
                   #template being filled
                   template_name = "main/home.html",
                   #context is the information passed to template
-                  context = {"tutorials": Tutorial.objects.all})
+                  context = {"articles": Article.objects.all})
