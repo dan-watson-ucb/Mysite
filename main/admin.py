@@ -14,9 +14,9 @@ class ArticleAdmin(admin.ModelAdmin):
 
     # creating sets to segment
     fieldsets = [
-        ("Title/Date", {"fields": ['Article_title', 'Article_published']}),
-        ("Image", {"fields": ['Article_image']}),
-        ("Content", {'fields': ['Article_slug', 'Article_content']})
+        ("Title/Date", {"fields": ['article_title', 'article_published']}),
+        ("Image", {"fields": ['article_image']}),
+        ("Content", {'fields': ['article_slug', 'article_content']})
     ]
 
     # add MCE only to our tutorial fields
