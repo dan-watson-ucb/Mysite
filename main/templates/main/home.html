@@ -7,9 +7,13 @@
             <div class="col s12 m6 l4">
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
-                        <span class="card-title">{{art.article_title}}</span>
-                        <p style = 'font-size: 70%'> {{ art.article_published}} </p>
-                        <p> {{art.article_content|safe}} </p>
+                        <span class="card-title">{{art.Article_title}}</span>
+                        <span> {{art.Article_slug}}
+                        <p style = 'font-size: 70%'> {{ art.Article_published}} </p>
+                        {% if art.Article_image %}
+                            <img src = {{ art.Article_image.url }}>
+                        {% endif %}
+                        <p> {{ art.Article_content|safe }} </p>
                     </div>
                 <div class="card-action">
                 <a href="#">This is a link</a>

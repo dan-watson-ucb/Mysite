@@ -18,6 +18,7 @@ from django.urls import path, include
 
 from django.conf import settings
 from django.views.static import serve
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("", include('main.urls')), #when path is blank sends to main.urls
@@ -25,3 +26,4 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
 ]
 
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
